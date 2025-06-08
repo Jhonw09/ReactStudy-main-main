@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudyConect+</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            StudyConect+
+        </div>
+        <nav>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#professores">Professores</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="http://127.0.0.1:5500/ReactStudy-main-main/ReactStudy-main/Login/Login.html">Entrar</a></li> </ul>
+            <div class="toggle-dark" tabindex="0" id="darkModeToggle">
+                <img id="dark-mode-icon" src="sun-icon.png" alt="Modo Claro" class="sun-icon" />
+                <img src="moon-icon.png" alt="Modo Escuro" class="moon-icon" style="display: none;" />
+            </div>
+            <div class="mobile-menu" tabindex="0" id="mobileMenuToggle">
+                ☰
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="carrossel">
+                <div class="carousel-wrapper">
+                    <div class="carousel-images" id="carouselImages">
+                        <img src="images/13.png" alt="Imagem 1" />
+                        <img src="images/Purple Pink Gradient Mobile Application Presentation (1920 x 1080 px).png" alt="Imagem 2" />
+                        
+                    </div>
+            </div>
+        </section>
+
+        <section id="cursos">
+            <h2 class="center-btn">Nossos Cursos</h2>
+            <div class="container">
+                <div class="card-3d-container">
+                    <div class="card-3d">
+                        <img src="images/curso1.jpg" alt="Curso 1" />
+                        <h3>Front-End Moderno</h3>
+                        <p>Aprenda HTML, CSS, JavaScript e frameworks modernos.</p>
+                        <button class="btn">Acessar Curso</button>
+                    </div>
+                </div>
+                <div class="card-3d-container">
+                    <div class="card-3d">
+                        <img src="images/curso2.jpg" alt="Curso 2" />
+                        <h3>Back-End Avançado</h3>
+                        <p>Domine Node.js, APIs, bancos de dados e muito mais.</p>
+                        <button class="btn">Acessar Curso</button>
+                    </div>
+                </div>
+                <div class="card-3d-container">
+                    <div class="card-3d">
+                        <img src="images/curso3.jpg" alt="Curso 3" />
+                        <h3>Design e UI/UX</h3>
+                        <p>Crie interfaces modernas e focadas na experiência do usuário.</p>
+                        <button class="btn">Acessar Curso</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="professores">
+            <h2 class="center-btn">Nossos Professores</h2>
+            <div class="container">
+                <div class="card-3d-container">
+                    <div class="card-3d">
+                        <img src="images/prof1.jpg" alt="Professor 1" />
+                        <h3>Maria Silva</h3>
+                        <p>Especialista em Front-End e UI/UX com 8 anos de experiência.</p>
+                        <button class="btn">Acessar Perfil</button>
+                    </div>
+                </div>
+                <div class="card-3d-container">
+                    <div class="card-3d">
+                        <img src="images/prof2.jpg" alt="Professor 2" />
+                        <h3>Carlos Souza</h3>
+                        <p>Desenvolvedor Back-End e especialista em segurança de sistemas.</p>
+                        <button class="btn">Acessar Perfil</button>
+                    </div>
+                </div>
+                <div class="card-3d-container">
+                    <div class="card-3d">
+                        <img src="images/prof3.jpg" alt="Professor 3" />
+                        <h3>Ana Lima</h3>
+                        <p>Designer UI/UX apaixonada por criar experiências incríveis.</p>
+                        <button class="btn">Acessar Perfil</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contato">
+            <form id="contact-form" class="form">
+                <h2 class="center-btn">Entre em Contato</h2>
+                <input type="text" placeholder="Seu Nome" name="name" required />
+                <input type="email" placeholder="Seu E-mail" name="email" required />
+                <textarea placeholder="Sua Mensagem" name="message" rows="5" required></textarea>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 StudyConect+. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
