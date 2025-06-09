@@ -64,7 +64,7 @@ if (loginForm) {
             showAlert('Login bem-sucedido!', 'success'); // Usa o alerta personalizado para sucesso
             // Atrasar o redirecionamento um pouco para o usuário ver o alerta
             setTimeout(() => {
-                window.location.href = 'http://127.0.0.1:5500/ReactStudy-main-main/ReactStudy-main/index.html'; // Redireciona o usuário para a sua página principal
+                window.location.href = "https://probable-robot-695xw96pxvjgcgqg-5501.app.github.dev/ReactStudy-main-main/ReactStudy-main/" // Redireciona o usuário para a sua página principal
             }, 1500); // Redireciona após 1.5 segundos
         } else {
             showAlert('Credenciais inválidas. Por favor, tente novamente.', 'error'); // Usa o alerta personalizado para erro
