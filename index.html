@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>StudyConect+ | Plataforma de Estudos Profissional</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animations.css" />
+    <link rel="stylesheet" href="card-fix.css" />
+    <link rel="stylesheet" href="highlight-fix.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Lines Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>StudyConect+</span>
+            </div>
+            <div class="loading-spinner"></div>
+            <p>Carregando experiência de aprendizado...</p>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap logo-icon"></i>
+                <span class="logo-text">StudyConect+</span>
+                <div class="logo-glow"></div>
+            </div>
+            <nav>
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#cursos"><i class="fas fa-book"></i> Cursos</a></li>
+                    <li><a href="#professores"><i class="fas fa-chalkboard-teacher"></i> Professores</a></li>
+                    <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+                    <li><a href="Login/Login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Entrar</a></li>
+                </ul>
+                <div class="header-controls">
+                    <div class="toggle-dark" tabindex="0" id="darkModeToggle">
+                        <div class="toggle-slider">
+                            <i class="fas fa-sun sun-icon"></i>
+                            <i class="fas fa-moon moon-icon"></i>
+                        </div>
+                    </div>
+                    <div class="mobile-menu" tabindex="0" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Transforme seu</span>
+                        <span class="title-line highlight">Futuro</span>
+                        <span class="title-line">com Educação</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Plataforma completa de estudos com cursos profissionais <strong>GRATUITOS</strong>, 
+                        professores especializados e metodologia inovadora para acelerar sua carreira.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="1000">0</span>
+                            <span class="stat-label">Alunos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="50">0</span>
+                            <span class="stat-label">Cursos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="25">0</span>
+                            <span class="stat-label">Professores</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#cursos" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            Começar Agora
+                        </a>
+                        <a href="#professores" class="btn btn-secondary">
+                            <i class="fas fa-play"></i>
+                            Conhecer Professores
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-cards">
+                        <div class="floating-card card-1">
+                            <i class="fas fa-code"></i>
+                            <span>Programação</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fas fa-palette"></i>
+                            <span>Design</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile</span>
+                        </div>
+                        <div class="floating-card card-4">
+                            <i class="fas fa-database"></i>
+                            <span>Backend</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="cursos" class="courses-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-accent"></span> Nossos Cursos
+                </h2>
+                <p class="section-subtitle">
+                    Cursos GRATUITOS desenvolvidos por especialistas para acelerar sua carreira
+                </p>
+            </div>
+            
+            <div class="courses-filter">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> Todos
+                </button>
+                <button class="filter-btn" data-filter="frontend">
+                    <i class="fas fa-laptop-code"></i> Frontend
+                </button>
+                <button class="filter-btn" data-filter="backend">
+                    <i class="fas fa-server"></i> Backend
+                </button>
+                <button class="filter-btn" data-filter="design">
+                    <i class="fas fa-palette"></i> Design
+                </button>
+                <button class="filter-btn" data-filter="mobile">
+                    <i class="fas fa-mobile-alt"></i> Mobile
+                </button>
+            </div>
+
+            <div class="courses-grid animate-on-scroll">
+                <div class="course-card hover-lift" data-category="frontend">
+                    <div class="card-header">
+                        <div class="course-badge">Mais Popular</div>
+                        <div class="course-level">Iniciante</div>
+                    </div>
+                    <div class="card-image">
+                        <img src="images/Foto-programação Web.webp" alt="Front-End Moderno" />
+                        <div class="image-overlay">
+                            <div class="course-duration">
+                                <i class="fas fa-clock"></i> 40h
+                            </div>
+                            <div class="course-students">
+                                <i class="fas fa-users"></i> 250+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Front-End Moderno</h3>
+                        <p>Domine HTML5, CSS3, JavaScript ES6+ e frameworks como React. Crie interfaces modernas e responsivas.</p>
+                        <div class="course-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">React</span>
+                        </div>
+
+                    </div>
+                    <div class="card-footer">
+                        <div class="course-price">
+                            <span class="price-free">GRATUITO</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="like-btn">
+                                <i class="fas fa-heart"></i>
+                                <span>1.2k</span>
+                            </button>
+                            <a href="cursos/frontend-moderno.html" class="btn btn-course">
+                                <i class="fas fa-play"></i> Começar Curso
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card hover-lift" data-category="backend">
+                    <div class="card-header">
+                        <div class="course-badge premium">Premium</div>
+                        <div class="course-level advanced">Avançado</div>
+                    </div>
+                    <div class="card-image">
+                        <img src="images/2.jpg" alt="Back-End Avançado" />
+                        <div class="image-overlay">
+                            <div class="course-duration">
+                                <i class="fas fa-clock"></i> 60h
+                            </div>
+                            <div class="course-students">
+                                <i class="fas fa-users"></i> 180+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Back-End Avançado</h3>
+                        <p>Desenvolva APIs robustas com Node.js, trabalhe com bancos de dados e implemente arquiteturas escaláveis.</p>
+                        <div class="course-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+
+                    </div>
+                    <div class="card-footer">
+                        <div class="course-price">
+                            <span class="price-free">GRATUITO</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="like-btn">
+                                <i class="fas fa-heart"></i>
+                                <span>890</span>
+                            </button>
+                            <a href="cursos/backend-avancado.html" class="btn btn-course">
+                                <i class="fas fa-play"></i> Começar Curso
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card hover-lift" data-category="design">
+                    <div class="card-header">
+                        <div class="course-badge new">Novo</div>
+                        <div class="course-level">Intermediário</div>
+                    </div>
+                    <div class="card-image">
+                        <img src="images/3.jpg" alt="Design e UI/UX" />
+                        <div class="image-overlay">
+                            <div class="course-duration">
+                                <i class="fas fa-clock"></i> 35h
+                            </div>
+                            <div class="course-students">
+                                <i class="fas fa-users"></i> 320+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Design e UI/UX</h3>
+                        <p>Crie experiências digitais incríveis. Aprenda design thinking, prototipagem e ferramentas profissionais.</p>
+                        <div class="course-tech">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Adobe XD</span>
+                            <span class="tech-tag">Photoshop</span>
+                            <span class="tech-tag">Sketch</span>
+                        </div>
+
+                    </div>
+                    <div class="card-footer">
+                        <div class="course-price">
+                            <span class="price-free">GRATUITO</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="like-btn">
+                                <i class="fas fa-heart"></i>
+                                <span>1.5k</span>
+                            </button>
+                            <a href="cursos/design-uiux.html" class="btn btn-course">
+                                <i class="fas fa-play"></i> Começar Curso
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card hover-lift" data-category="mobile">
+                    <div class="card-header">
+                        <div class="course-badge trending">Em Alta</div>
+                        <div class="course-level">Intermediário</div>
+                    </div>
+                    <div class="card-image">
+                        <img src="images/4.jpg" alt="Desenvolvimento Mobile" />
+                        <div class="image-overlay">
+                            <div class="course-duration">
+                                <i class="fas fa-clock"></i> 50h
+                            </div>
+                            <div class="course-students">
+                                <i class="fas fa-users"></i> 200+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Desenvolvimento Mobile</h3>
+                        <p>Desenvolva apps nativos para iOS e Android. Aprenda React Native, Flutter e publique na App Store.</p>
+                        <div class="course-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+
+                    </div>
+                    <div class="card-footer">
+                        <div class="course-price">
+                            <span class="price-free">GRATUITO</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="like-btn">
+                                <i class="fas fa-heart"></i>
+                                <span>750</span>
+                            </button>
+                            <a href="cursos/desenvolvimento-mobile.html" class="btn btn-course">
+                                <i class="fas fa-play"></i> Começar Curso
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="professores" class="teachers-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-accent"></span> Nossos Professores
+                </h2>
+                <p class="section-subtitle">
+                    Aprenda com profissionais experientes do mercado
+                </p>
+            </div>
+
+            <div class="teachers-grid animate-on-scroll">
+                <div class="teacher-card hover-lift">
+                    <div class="teacher-image">
+                        <img src="images/foto 3 do insta.jpg" alt="Maria Silva" />
+                        <div class="teacher-overlay">
+                            <div class="social-links">
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="teacher-status online"></div>
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Maria Silva</h3>
+                        <p class="teacher-role">Especialista Front-End & UI/UX</p>
+                        <p class="teacher-description">
+                            8 anos de experiência em desenvolvimento front-end e design de interfaces. 
+                            Ex-Google, especialista em React e Vue.js.
+                        </p>
+                        <div class="teacher-stats">
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>450+ alunos</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>4.9 rating</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-book"></i>
+                                <span>3 cursos</span>
+                            </div>
+                        </div>
+                        <div class="teacher-skills">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Vue.js</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">TypeScript</span>
+                        </div>
+                        <a href="professores/maria-silva.html" class="btn btn-teacher">
+                            <i class="fas fa-user"></i> Ver Perfil
+                        </a>
+                    </div>
+                </div>
+
+                <div class="teacher-card hover-lift">
+                    <div class="teacher-image">
+                        <img src="images/sitep2.jpg" alt="Carlos Souza" />
+                        <div class="teacher-overlay">
+                            <div class="social-links">
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="teacher-status online"></div>
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Carlos Souza</h3>
+                        <p class="teacher-role">Arquiteto de Software & DevOps</p>
+                        <p class="teacher-description">
+                            10 anos desenvolvendo sistemas escaláveis. Especialista em Node.js, 
+                            microserviços e segurança de aplicações.
+                        </p>
+                        <div class="teacher-stats">
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>320+ alunos</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>4.8 rating</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-book"></i>
+                                <span>2 cursos</span>
+                            </div>
+                        </div>
+                        <div class="teacher-skills">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">MongoDB</span>
+                        </div>
+                        <a href="professores/carlos-souza.html" class="btn btn-teacher">
+                            <i class="fas fa-user"></i> Ver Perfil
+                        </a>
+                    </div>
+                </div>
+
+                <div class="teacher-card hover-lift">
+                    <div class="teacher-image">
+                        <img src="images/3 - Copia.jpg" alt="Ana Lima" />
+                        <div class="teacher-overlay">
+                            <div class="social-links">
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-behance"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="teacher-status away"></div>
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Ana Lima</h3>
+                        <p class="teacher-role">Design Lead & UX Researcher</p>
+                        <p class="teacher-description">
+                            6 anos criando experiências digitais memoráveis. 
+                            Ex-Spotify, especialista em design systems e pesquisa UX.
+                        </p>
+                        <div class="teacher-stats">
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>580+ alunos</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>4.9 rating</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-book"></i>
+                                <span>4 cursos</span>
+                            </div>
+                        </div>
+                        <div class="teacher-skills">
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Adobe XD</span>
+                            <span class="skill-tag">Sketch</span>
+                            <span class="skill-tag">Prototyping</span>
+                        </div>
+                        <a href="professores/ana-lima.html" class="btn btn-teacher">
+                            <i class="fas fa-user"></i> Ver Perfil
+                        </a>
+                    </div>
+                </div>
+
+                <div class="teacher-card hover-lift">
+                    <div class="teacher-image">
+                        <img src="images/Carrossel2.jpg" alt="João Pereira" />
+                        <div class="teacher-overlay">
+                            <div class="social-links">
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="teacher-status online"></div>
+                    </div>
+                    <div class="teacher-info">
+                        <h3>João Pereira</h3>
+                        <p class="teacher-role">Mobile Developer & Flutter Expert</p>
+                        <p class="teacher-description">
+                            7 anos desenvolvendo apps mobile. Google Developer Expert em Flutter, 
+                            com apps publicados que somam milhões de downloads.
+                        </p>
+                        <div class="teacher-stats">
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>290+ alunos</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>4.7 rating</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-book"></i>
+                                <span>2 cursos</span>
+                            </div>
+                        </div>
+                        <div class="teacher-skills">
+                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">Dart</span>
+                            <span class="skill-tag">Firebase</span>
+                        </div>
+                        <a href="professores/joao-pereira.html" class="btn btn-teacher">
+                            <i class="fas fa-user"></i> Ver Perfil
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contato" class="contact-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-accent">Entre em</span> Contato
+                </h2>
+                <p class="section-subtitle">
+                    Tem dúvidas? Nossa equipe está pronta para ajudar você
+                </p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>contato@studyconect.com</p>
+                            <span>Resposta em até 24h</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telefone</h4>
+                            <p>(11) 9999-9999</p>
+                            <span>Seg-Sex: 9h às 18h</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Localização</h4>
+                            <p>São Paulo, SP</p>
+                            <span>Brasil</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Horário de Atendimento</h4>
+                            <p>Segunda a Sexta</p>
+                            <span>9:00 - 18:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">
+                            <i class="fas fa-user"></i>
+                            Nome Completo
+                        </label>
+                        <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i>
+                            Email
+                        </label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">
+                            <i class="fas fa-tag"></i>
+                            Assunto
+                        </label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="curso">Informações sobre cursos</option>
+                            <option value="suporte">Suporte técnico</option>
+                            <option value="parceria">Parcerias</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">
+                            <i class="fas fa-comment"></i>
+                            Mensagem
+                        </label>
+                        <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-contact">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Enviar Mensagem</span>
+                        <div class="btn-loading">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>StudyConect+</span>
+                </div>
+                <p class="footer-description">
+                    Transformando vidas através da educação digital. 
+                    Cursos profissionais para acelerar sua carreira.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Cursos</h4>
+                <ul>
+                    <li><a href="#">Front-End Moderno</a></li>
+                    <li><a href="#">Back-End Avançado</a></li>
+                    <li><a href="#">Design UI/UX</a></li>
+                    <li><a href="#">Desenvolvimento Mobile</a></li>
+                    <li><a href="#">Todos os Cursos</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Nossa Equipe</a></li>
+                    <li><a href="#">Carreiras</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Imprensa</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 StudyConect+. Todos os direitos reservados.</p>
+            <div class="footer-badges">
+                <span class="badge">Certificado ISO 9001</span>
+                <span class="badge">Segurança SSL</span>
+                <span class="badge">Suporte 24/7</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
