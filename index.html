@@ -6,16 +6,16 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <title>StudyConnect+ | Plataforma de Estudos Profissional</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="animations.css" />
-    <link rel="stylesheet" href="card-fix.css" />
-    <link rel="stylesheet" href="highlight-fix.css" />
     <link rel="stylesheet" href="mobile-responsive.css" />
+    <link rel="stylesheet" href="quiz-styles-addon.css" />
+    <link rel="stylesheet" href="chatbot.css" />
+    <link rel="stylesheet" href="faq-layout.css" />
+    <link rel="stylesheet" href="course-fix.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Animated Lines Background -->
-    <div id="particles-js"></div>
+
     
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
@@ -40,6 +40,7 @@
                 <ul class="nav-list" id="nav-list">
                     <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="#cursos"><i class="fas fa-book"></i> Cursos</a></li>
+                    <li><a href="#quiz"><i class="fas fa-brain"></i> Quiz</a></li>
                     <li><a href="#professores"><i class="fas fa-chalkboard-teacher"></i> Professores</a></li>
                     <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
                     <li><a href="Login/Login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Entrar</a></li>
@@ -180,11 +181,10 @@
                             <span class="tech-tag">JavaScript</span>
                             <span class="tech-tag">React</span>
                         </div>
-
                     </div>
                     <div class="card-footer">
                         <div class="course-price">
-                            <span class="price-free">GRATUITO</span>
+                            
                         </div>
                         <div class="card-actions">
                             <button class="like-btn">
@@ -223,11 +223,10 @@
                             <span class="tech-tag">Express</span>
                             <span class="tech-tag">Docker</span>
                         </div>
-
                     </div>
                     <div class="card-footer">
                         <div class="course-price">
-                            <span class="price-free">GRATUITO</span>
+                          
                         </div>
                         <div class="card-actions">
                             <button class="like-btn">
@@ -266,11 +265,10 @@
                             <span class="tech-tag">Photoshop</span>
                             <span class="tech-tag">Sketch</span>
                         </div>
-
                     </div>
                     <div class="card-footer">
                         <div class="course-price">
-                            <span class="price-free">GRATUITO</span>
+                           
                         </div>
                         <div class="card-actions">
                             <button class="like-btn">
@@ -309,11 +307,10 @@
                             <span class="tech-tag">Dart</span>
                             <span class="tech-tag">Firebase</span>
                         </div>
-
                     </div>
                     <div class="card-footer">
                         <div class="course-price">
-                            <span class="price-free">GRATUITO</span>
+                         
                         </div>
                         <div class="card-actions">
                             <button class="like-btn">
@@ -545,6 +542,96 @@
                 </div>
             </div>
         </section>
+
+        <section id="quiz" class="quizzes-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-accent"></span> Quiz Educativo
+                </h2>
+                <p class="section-subtitle">
+                    Teste seus conhecimentos com nossos jogos educativos interativos
+                </p>
+            </div>
+
+            <div class="quizzes-grid animate-on-scroll">
+                <div class="quiz-card hover-lift">
+                    <div class="quiz-header">
+                        <div class="quiz-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="quiz-badge">Popular</div>
+                    </div>
+                    <div class="quiz-content">
+                        <h3>Quiz Misto</h3>
+                        <p>Teste seus conhecimentos em programação e cultura geral com perguntas variadas e divertidas!</p>
+                        <div class="quiz-stats">
+                            <div class="quiz-stat">
+                                <i class="fas fa-question-circle"></i>
+                                <span>10 Perguntas</span>
+                            </div>
+                            <div class="quiz-stat">
+                                <i class="fas fa-clock"></i>
+                                <span>~5 minutos</span>
+                            </div>
+                            <div class="quiz-stat">
+                                <i class="fas fa-trophy"></i>
+                                <span>Nível Fácil</span>
+                            </div>
+                        </div>
+                        <div class="quiz-topics">
+                            <span class="topic-tag">Programação</span>
+                            <span class="topic-tag">Geografia</span>
+                            <span class="topic-tag">História</span>
+                            <span class="topic-tag">Ciências</span>
+                        </div>
+                    </div>
+                    <div class="quiz-footer">
+                        <a href="quiz-misto.html" class="btn btn-quiz" target="_blank">
+                            <i class="fas fa-play"></i> Jogar Agora
+                        </a>
+                    </div>
+                </div>
+
+                <div class="quiz-card hover-lift">
+                    <div class="quiz-header">
+                        <div class="quiz-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="quiz-badge academic">Acadêmico</div>
+                    </div>
+                    <div class="quiz-content">
+                        <h3>Quiz de Português</h3>
+                        <p>Desafie-se com questões de gramática, literatura e interpretação do conteúdo do 9º ano!</p>
+                        <div class="quiz-stats">
+                            <div class="quiz-stat">
+                                <i class="fas fa-question-circle"></i>
+                                <span>10 Perguntas</span>
+                            </div>
+                            <div class="quiz-stat">
+                                <i class="fas fa-clock"></i>
+                                <span>~6 minutos</span>
+                            </div>
+                            <div class="quiz-stat">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>9º Ano</span>
+                            </div>
+                        </div>
+                        <div class="quiz-topics">
+                            <span class="topic-tag">Gramática</span>
+                            <span class="topic-tag">Literatura</span>
+                            <span class="topic-tag">Sintaxe</span>
+                            <span class="topic-tag">Interpretação</span>
+                        </div>
+                    </div>
+                    <div class="quiz-footer">
+                        <a href="quiz-portugues.html" class="btn btn-quiz" target="_blank">
+                            <i class="fas fa-play"></i> Jogar Agora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <section id="contato" class="contact-section">
             <div class="section-header">
                 <h2 class="section-title">
@@ -651,6 +738,80 @@
                 </form>
             </div>
         </section>
+
+        <section id="faq" class="faq-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-accent"></span> FAQ - Assistente Virtual
+                </h2>
+                <p class="section-subtitle">
+                    Converse com nossa IA e tire suas dúvidas sobre a plataforma
+                </p>
+            </div>
+
+            <div class="faq-content">
+                <div class="faq-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>IA Inteligente</h3>
+                        <p>Respostas instantâneas sobre cursos</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>24/7 Online</h3>
+                        <p>Sempre disponível para ajudar</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Suporte Rápido</h3>
+                        <p>Informações precisas e ágeis</p>
+                    </div>
+                </div>
+                
+                <div class="chatbot-container">
+                    <div class="chat-header">
+                        <div class="bot-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="bot-info">
+                            <h3>StudyBot</h3>
+                            <span class="status online">Online</span>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message bot-message">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>Olá! 👋 Sou o StudyBot. Posso ajudar com dúvidas sobre cursos!</p>
+                                <div class="quick-questions">
+                                    <button class="quick-btn" data-question="Como funciona?">Como funciona?</button>
+                                    <button class="quick-btn" data-question="Cursos gratuitos?">Cursos gratuitos?</button>
+                                    <button class="quick-btn" data-question="Como me inscrever?">Como me inscrever?</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <input type="text" id="userInput" placeholder="Digite sua pergunta..." maxlength="100">
+                        <button id="sendBtn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     
     <footer class="footer">
@@ -734,7 +895,8 @@
 
     <!-- Scripts -->
     <script src="config.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
     <script src="script.js"></script>
+    <script src="simple-chatbot.js"></script>
 </body>
 </html>
