@@ -58,6 +58,7 @@
 
 /* Tema Escuro */
 body.dark-mode {
+  
   --text-primary: #ffffff;
   --text-secondary: #f7fafc;
   --text-muted: #cbd5e0;
@@ -71,6 +72,22 @@ body.dark-mode {
   --shadow-lg: 0 10px 15px rgba(0,0,0,0.3);
   --shadow-xl: 0 20px 25px rgba(0,0,0,0.4);
   --shadow-glow: 0 0 20px rgba(102, 126, 234, 0.5);
+}
+
+/* Botão primário no tema escuro */
+body.dark-mode .btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.5);
+  border: 2px solid #2563eb;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .btn-primary:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.7);
+  border-color: #1d4ed8;
 }
 
 /* ===========================
@@ -397,6 +414,7 @@ body:not(.dark-mode) .moon-icon {
   padding: 8rem 2rem 4rem;
   position: relative;
   overflow: hidden;
+  
 }
 
 .hero-content {
@@ -428,8 +446,17 @@ body:not(.dark-mode) .moon-icon {
   animation: slideUp 0.8s ease forwards;
 }
 
+.title-line:first-child {
+  color: #166534 !important;
+}
+
 .title-line:nth-child(2) {
   animation-delay: 0.2s;
+  color: #166534 !important;
+}
+
+.title-primary {
+  color: var(--primary-color);
 }
 
 .title-line:nth-child(3) {
@@ -721,14 +748,19 @@ section {
 }
 
 .btn-primary {
-  background: var(--primary-gradient);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: white;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+  border: 2px solid #1d4ed8;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6);
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  border-color: #1e40af;
 }
 
 .btn-secondary {
@@ -2058,6 +2090,51 @@ body.dark-mode .footer {
 }
 
 /* ===========================
+   BOTÃO INSTAGRAM CHAMATIVO
+=========================== */
+.btn-instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  animation: instagram-pulse 2s infinite;
+}
+
+.btn-instagram::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s;
+}
+
+.btn-instagram:hover::before {
+  left: 100%;
+}
+
+.btn-instagram:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(240, 148, 51, 0.4);
+  animation: none;
+}
+
+@keyframes instagram-pulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(240, 148, 51, 0.3);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(240, 148, 51, 0.5);
+    transform: translateY(-1px);
+  }
+}
+
+
+
+/* ===========================
    PÁGINAS DE CURSO
 =========================== */
 .course-page {
@@ -2859,4 +2936,110 @@ body.dark-mode .footer {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-secondary);
+}
+
+/* ===========================
+   RESPONSIVIDADE PARA TÍTULOS VERDES
+=========================== */
+@media (max-width: 1024px) {
+  .title-line:first-child,
+  .title-line:nth-child(2) {
+    color: #166534 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-line:first-child,
+  .title-line:nth-child(2) {
+    color: #166534 !important;
+  }
+  
+  .hero-title {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .title-line:first-child,
+  .title-line:nth-child(2) {
+    color: #166534 !important;
+  }
+  
+  .hero-title {
+    font-size: clamp(1.8rem, 8vw, 2.2rem);
+  }
+}
+
+@media (max-width: 320px) {
+  .title-line:first-child,
+  .title-line:nth-child(2) {
+    color: #166534 !important;
+  }
+  
+  .hero-title {
+    font-size: clamp(1.5rem, 10vw, 2rem);
+  }
+}
+/* ===========================
+   OTIMIZAÇÕES MOBILE
+=========================== */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Reduzir animações em mobile para melhor performance */
+@media (max-width: 768px) {
+  .course-card:hover,
+  .teacher-card:hover {
+    transform: translateY(-5px) scale(1.01);
+  }
+  
+  #particles-js {
+    display: none;
+  }
+  
+  .floating-cards {
+    display: none !important;
+  }
+  
+  .logo-glow {
+    display: none;
+  }
+  
+  .image-glow {
+    display: none;
+  }
+  
+  /* Garantir que títulos verdes funcionem em mobile */
+  .title-line:first-child,
+  .title-line:nth-child(2) {
+    color: #166534 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-line:first-child,
+  .title-line:nth-child(2) {
+    color: #166534 !important;
+  }
+  
+  .hero-title {
+    font-size: clamp(1.8rem, 8vw, 2.2rem) !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .title-line:first-child,
+  .title-line:nth-child(2) {
+    color: #166534 !important;
+  }
+  
+  .hero-title {
+    font-size: clamp(1.5rem, 10vw, 2rem) !important;
+  }
 }

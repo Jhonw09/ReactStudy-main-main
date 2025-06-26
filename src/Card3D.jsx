@@ -52,7 +52,7 @@ export default function Card3D() {
       >
         <div className="card-front">
           <h2>Bem-vindo!</h2>
-          <p>Estude com a StudyConect+</p>
+          <p>Estude com a StudyConnect+</p>
         </div>
         <div ref={decorLeftRef} className="card-decor-left">
           🌟
